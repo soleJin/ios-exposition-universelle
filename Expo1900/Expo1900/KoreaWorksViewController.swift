@@ -15,7 +15,7 @@ class KoreaWorksViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
-        navigationItem.title = "한국의 출품작"
+//        navigationItem.title = "한국의 출품작"
         decodeKoreaWorks()
     }
     

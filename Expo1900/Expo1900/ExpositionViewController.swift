@@ -2,14 +2,16 @@ import UIKit
 
 class ExpositionViewController: UIViewController {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var visitorsLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var visitorsLabel: UILabel!
+    @IBOutlet private weak var locationLabel: UILabel!
+    @IBOutlet private weak var durationLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    
+    private var exposition: Exposition?
 
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewDidLoad() {
@@ -21,23 +23,30 @@ class ExpositionViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.isNavigationBarHidden = false
-        let backBarButtonItem = UIBarButtonItem(title: "확인", style: .plain, target: self, action: nil)
-        self.navigationItem.backBarButtonItem = backBarButtonItem
     }
 }
 
 extension ExpositionViewController {
-    func updateExpositionInfo() {
-        titleLabel.text = exposition?.title
-        guard let visitors = exposition?.visitors,
-              let location = exposition?.location,
-              let duration = exposition?.duration else {
+    
+    private func updateExpositionInfo() {
+        guard let exposition = exposition else {return}
+        titleLabel.text = exposition.title
+        visitorsLabel.text = "방문객 : \(exposition.visitors.insertComma())"
+        locationLabel.text = "개최지 : \(exposition.location)"
+        durationLabel.text = "개최 기간 : \(exposition.duration)"
+        descriptionLabel.text = exposition.description
+    }
+    
+    private func decodeExpositionData() {
+        
+        let jasonDecoder = JSONDecoder()
+        guard let assetData: NSDataAsset = NSDataAsset(name: "exposition_universelle_1900") else {
+           return
+        }
+        guard let expositionData = try? jasonDecoder.decode(Exposition.self, from: assetData.data) else {
             return
         }
-        visitorsLabel.text = "방문객 : \(visitors.insertComma())"
-        locationLabel.text = "개최지 : \(location)"
-        durationLabel.text = "개최 기간 : \(duration)"
-        descriptionLabel.text = exposition?.description
+        exposition = expositionData
     }
 }
 
@@ -50,18 +59,6 @@ extension Int {
     }
 }
 
-var exposition: Exposition? = nil
 
-func decodeExpositionData() {
-    
-    let jasonDecoder = JSONDecoder()
-    guard let assetData: NSDataAsset = NSDataAsset(name: "exposition_universelle_1900") else {
-       return
-    }
-    guard let expositionData = try? jasonDecoder.decode(Exposition.self, from: assetData.data) else {
-        return
-    }
-    exposition = expositionData
-}
 
 

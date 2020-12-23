@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Exposition View Controller-->
+        <!--메인-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ExpositionViewController" customModule="Expo1900" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,9 +130,7 @@
                             <constraint firstItem="TLU-D6-gwW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vFK-08-WIc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="eCR-NC-UYv">
-                        <barButtonItem key="backBarButtonItem" title="ㅁㄴㅇㄹㅁㄴㅇㄹ" id="lAf-wr-gAZ"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="메인" largeTitleDisplayMode="always" id="eCR-NC-UYv"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="27G-gB-VBG" id="bRa-Vz-5MS"/>
                         <outlet property="durationLabel" destination="X8m-7H-hxr" id="A2d-cX-TmO"/>
@@ -145,7 +143,7 @@
             </objects>
             <point key="canvasLocation" x="712.79999999999995" y="115.27093596059113"/>
         </scene>
-        <!--Korea Works View Controller-->
+        <!--한국의 출품작-->
         <scene sceneID="Ueg-jA-pg0">
             <objects>
                 <viewController id="Wtv-Hu-15P" customClass="KoreaWorksViewController" customModule="Expo1900" customModuleProvider="target" sceneMemberID="viewController">
@@ -208,7 +206,7 @@
                         <viewLayoutGuide key="safeArea" id="Twq-On-9Jk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BhE-Sx-nEN"/>
+                    <navigationItem key="navigationItem" title="한국의 출품작" id="BhE-Sx-nEN"/>
                     <connections>
                         <segue destination="gRS-fG-mhS" kind="show" identifier="showDetail" id="yAq-2o-1r0"/>
                     </connections>
@@ -268,9 +266,10 @@
         <!--Navigation Controller-->
         <scene sceneID="zaG-mL-j5t">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="jl3-Ly-daQ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jl3-Ly-daQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FE3-0L-pCf">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
