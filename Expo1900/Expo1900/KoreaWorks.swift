@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 struct KoreaWorks: Decodable {
-    let name: String
-    private let imageName: String
-    let shortDescription: String
-    let description: String
+    var name: String
+    private var imageName: String
+    var shortDescription: String
+    var description: String
     
     var image: UIImage? {
         return UIImage(named: self.imageName)
@@ -23,5 +23,12 @@ struct KoreaWorks: Decodable {
         case imageName = "image_name"
         case shortDescription = "short_desc"
         case description = "desc"
+    }
+    
+    init(name: String) {
+        self.name = name
+        self.imageName = "aslkdjf"
+        self.shortDescription = "dklfsdlkf"
+        self.description = "sdkjfhsdlfkhjklcxn"
     }
 }
