@@ -15,6 +15,8 @@
 		C79FF4C12589F404005FB0FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */; };
 		FD1DF1392590C10A00FDD3B6 /* Exposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1DF1382590C10A00FDD3B6 /* Exposition.swift */; };
 		FD1DF13C2590C42A00FDD3B6 /* KoreaWorks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1DF13B2590C42A00FDD3B6 /* KoreaWorks.swift */; };
+		FD89008325923D1500471464 /* KoreaWorksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD89008225923D1500471464 /* KoreaWorksViewController.swift */; };
+		FD8900872592411900471464 /* KoreaWorksDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8900862592411900471464 /* KoreaWorksDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		C79FF4C22589F404005FB0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD1DF1382590C10A00FDD3B6 /* Exposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exposition.swift; sourceTree = "<group>"; };
 		FD1DF13B2590C42A00FDD3B6 /* KoreaWorks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreaWorks.swift; sourceTree = "<group>"; };
+		FD89008225923D1500471464 /* KoreaWorksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreaWorksViewController.swift; sourceTree = "<group>"; };
+		FD8900862592411900471464 /* KoreaWorksDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreaWorksDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
 				C79FF4B82589F401005FB0FD /* ExpositionViewController.swift */,
+				FD89008225923D1500471464 /* KoreaWorksViewController.swift */,
+				FD8900862592411900471464 /* KoreaWorksDetailViewController.swift */,
 				C79FF4BA2589F401005FB0FD /* Main.storyboard */,
 				FD1DF1382590C10A00FDD3B6 /* Exposition.swift */,
 				FD1DF13B2590C42A00FDD3B6 /* KoreaWorks.swift */,
@@ -147,6 +153,8 @@
 				FD1DF1392590C10A00FDD3B6 /* Exposition.swift in Sources */,
 				FD1DF13C2590C42A00FDD3B6 /* KoreaWorks.swift in Sources */,
 				C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */,
+				FD89008325923D1500471464 /* KoreaWorksViewController.swift in Sources */,
+				FD8900872592411900471464 /* KoreaWorksDetailViewController.swift in Sources */,
 				C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,10 +1,3 @@
-//
-//  KoreaWorks.swift
-//  Expo1900
-//
-//  Created by sole on 2020/12/21.
-//
-
 import Foundation
 import UIKit
 
@@ -25,3 +18,4 @@ struct KoreaWorks: Codable {
         case description = "desc"
     }
 }
+
